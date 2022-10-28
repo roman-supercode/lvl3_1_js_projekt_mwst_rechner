@@ -6,8 +6,9 @@ let beiAufschlag1 = "Nettobetrag(Preis ohne Mehrwertsteuer) in Euro";
 let beiAufschlag2 = "Bruttobetrag (Endpreis)";
 
 const Rechner = () => {
-    // Input = Nettobetrag 
+    // Input = Betrageingabe 
     const input = document.getElementById("betragEingabe").valueAsNumber;
+    console.log(input);
     // Netto zu Brutto .checked
     const firstCheck = document.getElementById("mwstAufschlagen").checked;
     // Brutto zu Netto .checked
@@ -18,6 +19,12 @@ const Rechner = () => {
     // 7% und check
     const mwst7 = Number(document.getElementById("7P").value);
     const mwst7Checked = document.getElementById("7P").checked;
+
+    // validation for empty input field
+    if (document.getElementById("betragEingabe").value === "") {
+        return alert("Gib doch bitte eine Zahl ein");
+    }
+
 
     if (firstCheck === true && mwst19Checked === true) {
         // Netto zu Brutto
@@ -66,6 +73,7 @@ const Rechner = () => {
         //Berechnung und Ausgabe Nettobetrag
         const outputBetrag = input - outputMWST;
         return document.getElementById("bruttoBetrag").innerHTML = Math.round(outputBetrag * 100) / 100;
+
     } else {
         document.getElementById("warnung").innerHTML = "Bitte Auswahl treffen!";
     }
