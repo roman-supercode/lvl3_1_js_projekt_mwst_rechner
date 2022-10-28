@@ -1,0 +1,138 @@
+@font-face {
+    font-family: PressStart;
+    src: url("../fonts/PressStart2P-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: PressStart;
+    font-size: 10px;
+}
+
+
+main {
+    /* background: linear-gradient(135deg, #001bff 0%, #eb6922 100%); */
+    background: linear-gradient(135deg, #f02fc2 0%, #6094ea 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 808px;
+    height: 708px;
+    margin: 0 auto;
+    gap: 3rem;
+    border-radius: 10px;
+}
+
+#sub-gradient {
+    background: linear-gradient(135deg, #5b247a 0%, #1bcedf 100%);
+    border-radius: 10px;
+    width: 800px;
+    height: 700px;
+    padding: 3rem;
+}
+
+main h1 {
+    font-size: 4rem;
+    background: linear-gradient(to right, crimson, pink, springgreen);
+    background-size: 200% 200%;
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 1);
+    transition: color .2s ease-in-out;
+}
+
+main h1:hover {
+    color: rgba(0, 0, 0, 0);
+}
+
+
+
+@keyframes rainbow {
+    0% {
+        background-position: left
+    }
+
+    50% {
+        background-position: right
+    }
+
+    100% {
+        background-position: left
+    }
+}
+
+main form h2 {
+    margin: 2rem 0;
+    color: rgb(150, 227, 148);
+    font-size: 2rem;
+}
+
+.radio {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.flex-c-betragEingabe {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+main form label {
+    font-size: 1.2rem;
+}
+
+.changeThat {
+    margin-top: 1rem;
+}
+
+#betragEingabe {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-color: cornflowerblue;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+
+main form button {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    border: 2px solid blueviolet;
+    font-size: 1.2rem;
+}
+
+main form button:hover {
+    background: rgb(40, 37, 37);
+    color: rgb(248, 239, 239);
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main section h3 {
+    color: turquoise;
+    font-size: 1.6rem;
+}
+
+main section article p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+main section article p span {
+    font-size: 1.6rem;
+    background: radial-gradient(circle at center center, #00E0F7 0%, #64F38C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
