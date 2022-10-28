@@ -29,7 +29,7 @@ const Rechner = () => {
         document.getElementById("mwstBetrag").innerHTML = Math.round(outputMWST * 100) / 100;
         //Berechnung und Ausgabe Bruttobetrag
         const outputBetrag = input + outputMWST;
-        return document.getElementById("bruttoBetrag").innerHTML = outputBetrag;
+        return document.getElementById("bruttoBetrag").innerHTML = Math.round(outputBetrag * 100) / 100;
 
     } else if (firstCheck === true && mwst7Checked === true) {
         // Netto zu Brutto
