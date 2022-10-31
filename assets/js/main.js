@@ -26,7 +26,7 @@ const Rechner = () => {
     }
 
 
-    if (firstCheck === true && mwst19Checked === true) {
+    if (firstCheck && mwst19Checked) {
         // Netto zu Brutto
         document.querySelector(".changeThat").innerHTML = beiAufschlag1;
         document.getElementById("changeThis").innerHTML = beiAufschlag2;
@@ -38,7 +38,7 @@ const Rechner = () => {
         const outputBetrag = input + outputMWST;
         return document.getElementById("bruttoBetrag").innerHTML = Math.round(outputBetrag * 100) / 100;
 
-    } else if (firstCheck === true && mwst7Checked === true) {
+    } else if (firstCheck && mwst7Checked) {
         // Netto zu Brutto
         document.querySelector(".changeThat").innerHTML = beiAufschlag1;
         document.getElementById("changeThis").innerHTML = beiAufschlag2;
@@ -50,7 +50,7 @@ const Rechner = () => {
         const outputBetrag = input + outputMWST;
         return document.getElementById("bruttoBetrag").innerHTML = Math.round(outputBetrag * 100) / 100;
 
-    } else if (secondCheck === true && mwst19Checked === true) {
+    } else if (secondCheck && mwst19Checked) {
         // Brutto zu Netto
         document.querySelector(".changeThat").innerHTML = beiAbzug1;
         document.getElementById("changeThis").innerHTML = beiAbzug2;
@@ -62,7 +62,7 @@ const Rechner = () => {
         const outputBetrag = input - outputMWST;
         return document.getElementById("bruttoBetrag").innerHTML = Math.round(outputBetrag * 100) / 100;
 
-    } else if (secondCheck === true && mwst7Checked === true) {
+    } else if (secondCheck && mwst7Checked) {
         // Brutto zu Netto
         document.querySelector(".changeThat").innerHTML = beiAbzug1;
         document.getElementById("changeThis").innerHTML = beiAbzug2;
